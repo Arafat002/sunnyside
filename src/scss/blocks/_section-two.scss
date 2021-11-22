@@ -1,0 +1,28 @@
+.section-two {
+    padding: 2rem 2rem 5rem 2rem;
+    text-align: center;
+    color: var(--darken-grayish);
+    
+
+    &-title {
+        margin-top: 2rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: .2rem;
+        color: var(--grayish);
+        @include tablet {
+            font-size: 1.7rem;
+            padding-top: 10rem;
+            margin: 0;
+        }
+    }
+}
+
+.testimonials {
+    @include tablet {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem 7rem 8rem 7rem;
+    }
+}

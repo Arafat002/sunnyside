@@ -1,0 +1,105 @@
+.mainMenu {
+    @include reset-list;
+    
+    text-decoration: none;
+    font-family: var(--text-font);
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .85rem 0;
+    width: 90%;
+    height: 300px;
+    background-color: var(--white-color);
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: top center;
+    transition: none;
+
+    @include tablet {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        top: 0;
+        padding: 0;
+        width:100%;
+        height: initial;
+        background-color: transparent;
+
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+
+    }
+
+    &__triangle {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: var(--white-color);
+        /* The points are: centered top, left bottom, right bottom */
+        clip-path: polygon(100% 100%, 0% 100%, 100% 0%);
+        margin-top: -50px;
+        right: 0;
+        transform: scale(1);
+        opacity: 1;
+        transition: none;
+        @include tablet {
+            display: none;
+        }
+    }
+
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: var(--dark-grayish);
+        font-size: 1.2rem;
+        margin: 2rem;
+        @include tablet {
+            display: initial;
+            margin: 0 1rem;
+            font-size: 1rem;
+            color: var(--white-color);
+            &:hover {
+                color: var(--photo-color);
+            }
+
+        }
+
+        &--primary {
+            background-color: var(--yellow-color);
+            padding: 1rem;
+            width: 150px;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 3rem;
+            color: var(--dark-color);
+            font-family: var(--header-font);
+            text-transform: uppercase;
+            font-size: 1rem;
+            @include tablet {
+                padding: 1rem 1.5rem;
+                font-size: .9rem;
+                background-color: var(--white-color);
+
+                &:hover {
+                    background-color: rgba($color: #fff, $alpha: 0.4);
+                    color: var(--white-color);
+                    // color: red;
+                }
+
+            }
+        }
+    }
+}
+
+
+/* -------- Nav activo con la clase ".active */
+.mainMenu.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: .2s ease-out;
+}

@@ -1,0 +1,33 @@
+.card {
+    margin: 0;
+    margin-bottom: 1.5rem;
+
+    &__img {
+        height: 5rem;
+        border-radius: 50%;
+        margin-top: 3rem;
+    }
+
+    &__text {
+        margin: 2rem 0;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+
+    &__name {
+        margin: 0 0 1rem 0;
+        font-size: 1.2rem;
+        font-family: var(--header-font);
+        font-weight: 900;
+        color: var(--dark-color);
+        @include tablet {
+            margin-top: 6rem;
+        }
+    }
+
+    &__job {
+        margin: 0;
+        font-size: 1rem;
+        color: var(--grayish);
+    }
+}

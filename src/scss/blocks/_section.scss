@@ -1,0 +1,81 @@
+.section {
+    margin: 0;
+    text-align: center;
+    height: 117vmin;
+    @include tablet {
+        height: 600px;
+        text-align: left;
+        padding: 10rem 7rem 10rem 10rem;
+    }
+
+    &:nth-child(4) {
+        @include tablet {
+            padding: 10rem 10rem 10rem 7rem;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding: 4rem 3rem 0 3rem;
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--dark-color);
+        @include tablet {
+            padding: 0;
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+
+    &__text {
+        color: var(--dark-grayish);
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        @include tablet {
+            padding: 0;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    // Links - color
+    &__link--yellow,
+    &__link--red {
+        position: relative;
+        color: var(--dark-color);
+        text-transform: uppercase;
+        font-family: var(--header-font);
+        font-size: 1rem;
+        font-weight: 900;
+        letter-spacing: .1rem;
+        text-decoration:none;
+
+        &:hover::after {
+            @include tablet {
+                opacity: 100%;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -7px;
+            bottom: -2px; /* Negative height */
+            width: 110%;
+            height: 10px; /* Height of border */
+            opacity: 40%;
+            border-radius: 8rem;
+            z-index: -100;
+            
+        }
+    }
+
+    &__link--yellow::after {
+        background-color: var(--yellow-color);
+    }
+    &__link--red::after {
+        background-color: var(--soft-red);
+    }
+}

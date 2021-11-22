@@ -1,0 +1,10 @@
+mixin about(title, text, link, color='yellow')
+    .section
+        if color == "yellow"
+            h2.section__title= title
+            p.section__text= text
+            a(href="#").section__link--yellow= link
+        else
+            h2.section__title= title
+            p.section__text= text
+            a(href="#").section__link--red= link

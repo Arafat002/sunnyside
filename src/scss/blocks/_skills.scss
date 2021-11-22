@@ -1,0 +1,39 @@
+.skills {
+    margin: 0;
+    text-align: center;
+    padding: 0 1.5rem;
+
+    &__title--graphic,
+    &__title--photo {
+        margin: 0;
+        padding-top: 105vmin;
+        padding-bottom: .7rem;
+        font-size: 1.75rem;
+        font-weight: 900;
+        text-transform: capitalize;
+        @include tablet {
+            padding-top: 25rem;
+        }
+    }
+
+    &__text--graphic,
+    &__text--photo {
+        font-size: .95rem;
+        line-height: 1.7;
+        @include tablet {
+            width: 320px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+
+    &__title--graphic,
+    &__text--graphic {
+        color: var(--graphic-color);
+    }
+    &__title--photo,
+    &__text--photo {
+        color: var(--photo-color);
+    }
+}

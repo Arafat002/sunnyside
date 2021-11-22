@@ -1,0 +1,9 @@
+#menu-btn {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+    display: none;
+    @include mobile {
+        display: initial;
+    }
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+
+@import "config/variables";
+@import "base/base";
+@import "mixins/reset-list";
+@import "mixins/breakpoints";
+
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/menu-mobile";
+@import "blocks/nav";
+@import "blocks/hero";
+@import "blocks/main";
+
+@import "blocks/section";
+@import "blocks/section-one";
+@import "blocks/skills";
+@import "blocks/section-two";
+@import "blocks/section-three";
+@import "blocks/card";
+
+@import "blocks/footer";

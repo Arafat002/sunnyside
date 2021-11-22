@@ -1,0 +1,8 @@
+mixin skills(title, text, skill='graphic')
+    .skills
+        if skill == "graphic"
+            h2.skills__title--graphic= title
+            p.skills__text--graphic= text
+        else
+            h2.skills__title--photo= title
+            p.skills__text--photo= text

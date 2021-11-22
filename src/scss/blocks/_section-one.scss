@@ -1,0 +1,63 @@
+.section-one {
+    margin: 0;
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    &__transform {
+        background-image: url("../assets/images/mobile/image-transform.jpg");
+        height: 83.5vmin;
+        @include tablet {
+            background-image: url("../assets/images/desktop/image-transform.jpg");
+            height: initial;
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+        }
+    }
+
+    &__stand {
+        background-image: url("../assets/images/mobile/image-stand-out.jpg");
+        height: 83.5vmin;
+        @include tablet {
+            background-image: url("../assets/images/desktop/image-stand-out.jpg");
+            height: initial;
+
+        }
+    }
+
+    
+    &__design {
+        background-image: url("../assets/images/mobile/image-graphic-design.jpg");
+        height: 160vmin;
+        @include tablet {
+            background-image: url("../assets/images/desktop/image-graphic-design.jpg");
+            height: 600px;
+        }
+    }
+
+    &__photo {
+        background-image: url("../assets/images/mobile/image-photography.jpg");
+        height: 160vmin;
+        @include tablet {
+            background-image: url("../assets/images/desktop/image-photography.jpg");
+            height: 600px;
+
+        }
+    }
+
+
+    &__transform,
+    &__stand,
+    &__design,
+    &__photo {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        @include tablet {
+            background-size: cover;
+        }
+    }
+}
